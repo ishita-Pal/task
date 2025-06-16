@@ -13,7 +13,7 @@ const TaskList = ({ tasks, setTasks }) => {
 
   const fetchTasks = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/tasks');
+      const response = await axios.get('https://task-2-dwo5.onrender.com/api/tasks');
       setTasks(response.data);
     } catch (error) {
       console.error('Error fetching tasks:', error);
@@ -26,7 +26,7 @@ const TaskList = ({ tasks, setTasks }) => {
 
   const handleEditSubmit = async (taskId) => {
     try {
-      await axios.put(`http://localhost:5000/api/tasks/${taskId}`, {
+      await axios.put(`https://task-2-dwo5.onrender.com/api/tasks/${taskId}`, {
         title: editValue
       });
 
@@ -45,7 +45,7 @@ const TaskList = ({ tasks, setTasks }) => {
 
   const deleteTask = async (taskId) => {
     try {
-      await axios.delete(`http://localhost:5000/api/tasks/${taskId}`);
+      await axios.delete(`https://task-2-dwo5.onrender.com/api/tasks/${taskId}`);
       fetchTasks();
     } catch (error) {
       console.error('Error deleting task:', error);
@@ -55,7 +55,7 @@ const TaskList = ({ tasks, setTasks }) => {
   const handleSliderChange = async (taskId, newValue) => {
     try {
       // Send update to backend
-      await axios.put(`http://localhost:5000/api/tasks/${taskId}`, {
+      await axios.put(`https://task-2-dwo5.onrender.com/api/tasks/${taskId}`, {
         scrollValue: newValue
       });
 
