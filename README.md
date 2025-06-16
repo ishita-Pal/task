@@ -14,39 +14,39 @@ The frontend communicates with the backend strictly through HTTP requests (using
     
     500 for server/database errors.
   
-  In a full version, I would add:
-  
-  Try-catch blocks around async code,
-  
-  Frontend-level validations before sending data,
-  
-  Displaying user-friendly error messages on the UI.
-
-4. What security features would you add in production?
-For a production-ready app, I would add:
-
-Helmet.js for securing HTTP headers,
-
-Rate limiting and CORS controls,
-
-Authentication and Authorization using JWT or sessions,
-
-Input validation with libraries like Joi or express-validator to prevent SQL Injection or XSS,
-
-Environment variables management with .env for sensitive data like database credentials.
-
-5. What would you improve if you had 1 full day?
-With an extra day, I would:
-
-Make the frontend fully responsive for all devices,
-
-Add sorting and filtering for tasks,
-
-Implement user authentication and personalized task views,
-
-Add confirmation popups before deleting or editing tasks,
-
-Improve UI/UX with animations and success/failure toasts,
-
-Possibly add a search bar and status toggle (pending/done) for better task management.
+        In a full version, I would add:
+        
+        Try-catch blocks around async code,
+        
+        Frontend-level validations before sending data,
+        
+        Displaying user-friendly error messages on the UI.
+      
+      4. What security features would you add in production?
+      For a production-ready app, I would add:
+      
+      Helmet.js for securing HTTP headers,
+      
+      Rate limiting and CORS controls,
+      
+      Authentication and Authorization using JWT or sessions,
+      
+      Input validation with libraries like Joi or express-validator to prevent SQL Injection or XSS,
+      
+      Environment variables management with .env for sensitive data like database credentials.
+      
+      5. What would you improve if you had 1 full day?
+      With an extra day, I would:
+      
+      Make the frontend fully responsive for all devices,
+      
+      Add sorting and filtering for tasks,
+      
+      Implement user authentication and personalized task views,
+      
+      Add confirmation popups before deleting or editing tasks,
+      
+      Improve UI/UX with animations and success/failure toasts,
+      
+      Possibly add a search bar and status toggle (pending/done) for better task management.
 
