@@ -1,0 +1,54 @@
+.h {
+  min-height: 20vh;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 20px;
+  z-index: 10;
+}
+
+.b {
+  width: 100%;
+  max-width: 320px;
+  margin: 0 auto;
+}
+
+.clk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.clk span {
+  font-size: clamp(28px, 6vw, 70px);
+  width: auto;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+/* Labels under the time */
+.h-t::after,
+.m-t::after,
+.s-t::after {
+  content: '';
+  font-size: clamp(10px, 2vw, 14px);
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #ccc;
+}
+
+.h-t::after {
+  content: 'HOURS';
+}
+
+.m-t::after {
+  content: 'MINS';
+}
+
+.s-t::after {
+  content: 'SEC';
+}

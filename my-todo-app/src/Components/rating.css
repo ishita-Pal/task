@@ -1,0 +1,74 @@
+/* Rating Styles */
+.box {
+    width: 440px;
+    margin: 0 auto
+  }
+  
+  p {
+    margin: 0;
+    padding-top: 47px;
+    color: #6B7280;
+    font-size: 24px;
+  }
+  
+  .rating {
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    /* background: linear-gradient(to right,#f00,#ff0,#0f0); */
+    background-color: #FEE140;
+    /* background-image: linear-gradient(90deg, #1c53c1 0%, #20dc75 100%); */
+    background-image: linear-gradient(120deg, #a6c0fe 2%, #f68084 100%);
+    /* background-image: linear-gradient(90deg, #f845e0 0%, #5b35d7); */
+  }
+  
+  .rating input {
+    display: none;
+  }
+  
+  .rating label {
+    display: block;
+    cursor: pointer;
+    width: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    background: #fff;
+    color: #000;
+    font-size: 20px;
+    border-right: 1px solid #000;
+  }
+  
+  .rating input[type="radio"]:hover~label,
+  .rating input[type="radio"]:checked~label {
+    background: transparent;
+  }
+  
+  @media screen and (max-width: 480px) {
+  .box {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  p {
+    font-size: 18px;
+    padding-top: 30px;
+  }
+
+  .rating {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .rating label {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    margin: 2px;
+  }
+}
