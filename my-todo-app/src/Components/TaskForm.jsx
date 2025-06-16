@@ -15,12 +15,12 @@ const handleSubmit = async (e) => {
   }
 
   try {
-    await axios.post('http://localhost:5000/api/tasks', {
+    await axios.post('https://task-2-dwo5.onrender.com/api/tasks', {
       title: task,
       priority: selectedRating
     });
 
-    await fetchTasks(); // ✅ get fresh full data
+    await fetchTasks(); 
     setTask('');
     setSelectedRating(null);
   } catch (error) {
