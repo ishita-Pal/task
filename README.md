@@ -7,21 +7,20 @@ I chose this structure to maintain a clear separation of concerns. The backend i
 The frontend communicates with the backend strictly through HTTP requests (using Axios). The backend exposes a RESTful API that the frontend consumes, which ensures a clean interface between them. This separation allows each part to be developed, tested, and deployed independently. I also hosted them on different platforms (Vercel for frontend, Render for backend), which reinforces their independence.
 
 3. How would you handle errors and edge cases?
-I used Postman extensively to test all API endpoints with different scenarios. The backend includes basic error handling using Express's status codes and error messages. For example:
-
-400 for bad requests (like missing fields),
-
-404 for not found,
-
-500 for server/database errors.
-
-In a full version, I would add:
-
-Try-catch blocks around async code,
-
-Frontend-level validations before sending data,
-
-Displaying user-friendly error messages on the UI.
+  I used Postman extensively to test all API endpoints with different scenarios. The backend includes basic error handling using Express's status codes and error messages. For example:
+    400 for bad requests (like missing fields),
+    
+    404 for not found,
+    
+    500 for server/database errors.
+  
+  In a full version, I would add:
+  
+  Try-catch blocks around async code,
+  
+  Frontend-level validations before sending data,
+  
+  Displaying user-friendly error messages on the UI.
 
 4. What security features would you add in production?
 For a production-ready app, I would add:
