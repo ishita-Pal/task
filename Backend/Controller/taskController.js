@@ -1,6 +1,5 @@
-const db = require('../config/db');
+const db = require('../Config/db');
 
-// Get all tasks
 exports.getTasks = (req, res) => {
     db.query('SELECT * FROM tasks', (err, results) => {
         if (err) return res.status(500).json({ error: err.message });
@@ -8,10 +7,8 @@ exports.getTasks = (req, res) => {
     });
 };
 
-// Create a new task
 exports.createTask = (req, res) => {
-    const { title, priority, scrollValue } = req.body; // include scrollValue
-
+    const { title, priority, scrollValue } = req.body; 
     const sql = 'INSERT INTO tasks (title, priority, scrollValue) VALUES (?, ?, ?)';
     db.query(sql, [title, priority, scrollValue], (err, result) => {
         if (err) return res.status(500).json({ error: err.message });
@@ -19,8 +16,6 @@ exports.createTask = (req, res) => {
     });
 };
 
-
-// ✅ Unified update function for title or scrollValue
 exports.updateTask = (req, res) => {
     const { id } = req.params;
     const { title, scrollValue } = req.body;
@@ -51,7 +46,6 @@ exports.updateTask = (req, res) => {
     });
 };
 
-// Delete a task
 exports.deleteTask = (req, res) => {
     const { id } = req.params;
     const sql = 'DELETE FROM tasks WHERE id = ?';
