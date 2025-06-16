@@ -22,7 +22,7 @@ The frontend communicates with the backend strictly through HTTP requests (using
         
         Displaying user-friendly error messages on the UI.
       
-      4. What security features would you add in production?
+  4. What security features would you add in production?
       For a production-ready app, I would add:
       
       Helmet.js for securing HTTP headers,
@@ -35,7 +35,7 @@ The frontend communicates with the backend strictly through HTTP requests (using
       
       Environment variables management with .env for sensitive data like database credentials.
       
-      5. What would you improve if you had 1 full day?
+  5. What would you improve if you had 1 full day?
       With an extra day, I would:
       
       Make the frontend fully responsive for all devices,
