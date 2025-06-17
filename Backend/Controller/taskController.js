@@ -1,9 +1,9 @@
 const db = require('../Config/db');
 db.query('SELECT 1', (err) => {
   if (err) {
-    console.error('❌ DB connection failed:', err.message);
+    console.error(' DB connection failed:', err.message);
   } else {
-    console.log('✅ DB connected successfully');
+    console.log('DB connected successfully');
   }
 });
 
