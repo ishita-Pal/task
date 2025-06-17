@@ -1,4 +1,11 @@
 const db = require('../Config/db');
+db.query('SELECT 1', (err) => {
+  if (err) {
+    console.error('❌ DB connection failed:', err.message);
+  } else {
+    console.log('✅ DB connected successfully');
+  }
+});
 
 exports.getTasks = (req, res) => {
     db.query('SELECT * FROM tasks', (err, results) => {
